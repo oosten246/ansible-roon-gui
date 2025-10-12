@@ -19,7 +19,7 @@ if [ $ID = "debian" ];then
 fi
 if [ $ID = "fedora" ];then
   VERSION_ID=$(cat /etc/os-release | grep -w VERSION_ID | cut -d= -f2 | tr -d '"')
-  if [ $VERSION_ID = "41" ];then
+  if [[ $VERSION_ID -gt 40 ]];then
     sudo dnf install -y python3-libdnf5  # Ansible does not (yet) understand dnf5
   fi
 fi

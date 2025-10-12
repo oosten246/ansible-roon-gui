@@ -32,8 +32,11 @@ Tested
 |Ubuntu 22.04 LTS|ok|
 |Ubuntu 24.04 LTS|ok|
 |Ubuntu 24.10    |ok|
+|Ubuntu 25.04    |ok|
+|Ubuntu 25.10    |ok|
 |Fedora 40       |ok|
 |Fedora 41       |ok|
+|Fedora 42       |ok|
 |Debian 12       |ok|
 |Linux Mint 22   |ok|
 
