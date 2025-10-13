@@ -32,7 +32,7 @@ python3 -m venv ~/roon_venv
 source ~/roon_venv/bin/activate
 
 # Install Ansible using PIP
-pip install ansible
+pip install ansible python-debian
 
 # Clone github repo
 if [ ! -d ~/roon_venv/gui ];then
