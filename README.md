@@ -33,7 +33,6 @@ Tested
 |Ubuntu 24.04 LTS|ok|
 |Ubuntu 24.10    |ok|
 |Ubuntu 25.04    |ok|
-|Ubuntu 25.10    |ok|
 |Fedora 40       |ok|
 |Fedora 41       |ok|
 |Fedora 42       |ok|
