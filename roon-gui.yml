@@ -11,7 +11,7 @@
 
   pre_tasks:
     - name: Reinstall roon-on-wine
-      when: lookup('env', 'ROON_ON_WINE_REINSTALL') is defined
+      when: lookup('env', 'ROON_ON_WINE_REINSTALL') not in ['', None]
       ansible.builtin.set_fact:
         roon_on_wine_reinstall: "{{ lookup('env', 'ROON_ON_WINE_REINSTALL') | bool }}"
 
