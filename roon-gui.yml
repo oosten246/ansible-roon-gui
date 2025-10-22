@@ -13,7 +13,7 @@
     - name: Reinstall roon-on-wine
       when: lookup('env', 'ROON_ON_WINE_REINSTALL') is defined
       ansible.builtin.set_fact:
-        roon_on_wine_reinstall: "{{ lookup('env', 'ROON_ON_WINE_REINSTALL') }}"
+        roon_on_wine_reinstall: "{{ lookup('env', 'ROON_ON_WINE_REINSTALL') | bool}}"
 
   roles:
     - roon-on-wine
