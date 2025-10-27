@@ -43,4 +43,4 @@ fi
 ansible-galaxy install -r ~/roon_venv/gui/requirements.yml
 
 # Run Ansible playbook
-ANSIBLE_BECOME_EXE=sudo.ws ansible-playbook  ~/roon_venv/gui/roon-gui.yml --ask-become-pass
+ansible-playbook  ~/roon_venv/gui/roon-gui.yml --ask-become-pass
