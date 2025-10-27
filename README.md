@@ -37,6 +37,7 @@ Tested
 |Fedora 41       |ok|
 |Fedora 42       |ok|
 |Debian 12       |ok|
+|Debian 13       |ok|
 |Linux Mint 22   |ok|
 
 Tested How?
