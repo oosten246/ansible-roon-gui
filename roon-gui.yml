@@ -1,19 +1,24 @@
 ---
 - name: Roon GUI
   hosts: localhost
-  become: true
 
-  roles:
-    - wine
-
-- name: Run as normal user
-  hosts: localhost
-
-  pre_tasks:
-    - name: Reinstall roon-on-wine
+  tasks:
+    - name: Set roon_on_wine_reinstall variable from environment
       when: lookup('env', 'ROON_ON_WINE_REINSTALL') not in ['', None]
       ansible.builtin.set_fact:
         roon_on_wine_reinstall: "{{ lookup('env', 'ROON_ON_WINE_REINSTALL') | bool }}"
 
-  roles:
-    - roon-on-wine
+    - name: Gather package facts
+      ansible.builtin.package_facts:
+        manager: auto
+
+    - name: Install Wine
+      ansible.builtin.include_role:
+        name: wine
+        apply:
+          become: true
+          become_exe: "{{ 'sudo.ws' if ansible_facts.packages['sudo-rs'] is defined else 'sudo' }}"
+
+    - name: Install Roon
+      ansible.builtin.include_role:
+        name: roon-on-wine
