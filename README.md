@@ -38,7 +38,8 @@ Tested
 |Fedora 42       |ok|
 |Debian 12       |ok|
 |Debian 13       |ok|
-|Linux Mint 22   |ok|
+|Linux Mint 22.2 |ok|
+|Linux Mint 22.3 |ok|
 
 Tested How?
 -----------
